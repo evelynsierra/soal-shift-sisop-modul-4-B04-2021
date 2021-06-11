@@ -89,6 +89,19 @@ void logging2(const char* old, char* new) {
 }
 ```
 Fungsi di atas akan dipanggil ketika folder berawalan `AtoZ_` terbentuk baik saat membuat(mkdir) maupun saat rename folder menjadi berawalan `AtoZ`. Fungsi tersebut menuliskan log sesuai dengan format `/home/[USER]/Downloads/[Nama Direktori] → /home/[USER]/Downloads/AtoZ_[Nama Direktori]`, jika file log belum ada dalam direktori, file log akan dibuat baru menuliskannya pada file tersebut. Setelah menulis pada file, tidak lupa diclose kembali. 
+### Screenshoot
+- Gambar di bawah ini merupakan kondisi awal dari Downloads dan folder tujuan. dapat dilihat pada folder tujuan, di dalam folder `AtoZ_zo` berisi file dan folder yang ter-encode.
+![awal1](https://user-images.githubusercontent.com/72771774/121619184-5da40b80-ca92-11eb-97d4-ac8c3d90ace1.PNG)
+- Gambar di bawah ini menunjukkan kondisi setelah rename file `AtoZ_zo` menjadi file yang tidak berawalan `AtoZ_` maka isinya akan ter-decode.
+![rename folder](https://user-images.githubusercontent.com/72771774/121619618-166a4a80-ca93-11eb-807f-96ca9b77bd77.PNG)
+- Gambar di bawah ini menunjukkan setelah membuat direktori `nanana`
+![mkdir](https://user-images.githubusercontent.com/72771774/121619764-4ade0680-ca93-11eb-8571-286e4aa92cab.PNG)
+- Gambar di bawah ini kondisi setelah remove folder `nanana` ke dalam folder `AtoZ_hiks`
+![remove nanana ke AtoZ_hiks](https://user-images.githubusercontent.com/72771774/121619820-6812d500-ca93-11eb-8c6e-eb1b15ad63fd.PNG)
+- Gambar di bawah ini kondisi setelah remove folder `ehe`
+![rmdir ehe](https://user-images.githubusercontent.com/72771774/121619951-a4decc00-ca93-11eb-8a3c-511c80e64b4f.PNG)
+- Dan gambar di bawah ini merupakan hasil log setelah membuat folder `unyah` dan rename folder tersebut menjadi `AtoZ_unyah`
+![fs](https://user-images.githubusercontent.com/72771774/121620098-ea9b9480-ca93-11eb-80c6-50ee6270f4dd.PNG)
 
 ## Soal 2
 Selain itu Sei mengusulkan untuk membuat metode enkripsi tambahan agar data pada komputer mereka semakin aman. Berikut rancangan metode enkripsi tambahan yang dirancang oleh Sei
@@ -191,5 +204,9 @@ static int xmp_rename(const char *source, const char *dest) {
 	return 0;
 }
 ```
+### Screenshoot
+Berikut merupakan hasil dari SinSeiFS.log berdasarkan step yang ada pada nomor 1
+![sinseifs](https://user-images.githubusercontent.com/72771774/121620286-46feb400-ca94-11eb-8dc8-3c8bf5007bc6.PNG)
+
 
 
